@@ -36,11 +36,12 @@ Feature 3: Use mocha awesome as the reporting tool
 
 Feature 4: Firewall settings
 1. In your terminal, enter the following command 
-Windows System:
-```Set HTTP_PROXY= value```
-```Set NO_PROXY=localhost,value 1, value 2...```
-This firewall setting only works from version 3.4.1. The previous versions of cypress did not work for me when the organisation uses firewall
-2. Make sure the host.txt has the right setup 
+```
+  Set HTTP_PROXY= value
+  Set NO_PROXY=localhost,value 1, value 2...
+```
+2. This firewall setting only works from version 3.4.1. The previous versions of cypress did not work for me when the organisation uses firewall
+3. Make sure the host.txt has the right setup 
 
 
 Feature 5: Plugins
