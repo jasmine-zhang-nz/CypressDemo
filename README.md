@@ -27,6 +27,7 @@ Feature 3: Use mocha awesome as the reporting tool
 `
 3. run the test and combine them with command `npx mochawesome-merge --reportDir cypress/results > mochawesome.json`
 4. generate a combined html report with command `npx mochawesome-report-generator mochawesome.json`
+5. please refer to Cypress official website https://docs.cypress.io/guides/tooling/reporters.html#Multiple-reporters-examples
 
 Feature 4: Firewall settings
 1. In your terminal, enter the following command 
