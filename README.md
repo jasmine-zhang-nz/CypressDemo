@@ -1,6 +1,22 @@
 # CypressDemo
 This is a short demo which includes some of the key features that I used in frontend testing
 
+Install Cypress
+
+1. npm init
+2. npm install cypress —save-dev
+3. ./node_modules/.bin/cypress open
+4. Modify the script to provide a short path to open cypress, open the package.json file and add the following command
+```
+{
+  "scripts": {
+    "cypress:open": "cypress open"
+  }
+}
+```
+5. Open the cypress test runner with the short path command: npm run cypress:open
+
+
 Feature 1: Use xpath in cypress
 1. In the terminal, run npm install -D cypress-xpath
 2. include this in the support/index.js 
