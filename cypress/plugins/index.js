@@ -11,7 +11,34 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
+const pdf = require('pdf-parse')
+const {Pool} = require('pg')
+
+const pool = new Pool(
+    {
+        host:'',
+        user:'',
+        password:'',
+        database:'',
+        port:'',
+        max:20
+    }
+)
+
+const parsePdf = async(file) =>{
+    let dataBuffer = fs.readFileSync(file)
+    return await pdf(dataBuffer)
+}
+
 module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+    on('task',{
+        getPdf(file)
+        {
+            return parsePdf(file)
+        },
+        query({sql, values})
+        {
+            return pool.query(sql, values)
+        }
+    })
 }
